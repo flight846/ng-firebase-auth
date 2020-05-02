@@ -1,0 +1,14 @@
+/* You can add global styles to this file, and also import other style files */
+
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+a:focus, button:focus { outline: none; }
+
+/*****************/
+/* Custom styles */
+.main { padding-top: 64px; }
+.example-fill-remaining-space {
+  flex: 1 1 auto;
+}
+.btn-group { display: flex; }
+.disabled { opacity: 0.5; cursor: not-allowed; }

@@ -1,0 +1,19 @@
+{
+  "hosting": [
+    {
+      "target": "ng-firebase-auth",
+      "public": "dist/ng-firebase-auth",
+      "ignore": [
+        "firebase.json",
+        "**/.*",
+        "**/node_modules/**"
+      ],
+      "rewrites": [
+        {
+          "source": "**",
+          "destination": "/index.html"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,33 @@
+
+<div class="grad-background-cucumber">
+  <div class="auth-wrapper">
+    <h1 class="text-left">{{ isLoginMode ? 'Login' : 'Sign up' }}</h1>
+    <mat-card>
+      <mat-progress-bar *ngIf="loading" mode="indeterminate" style="position: absolute; top: 0; left: 0;"></mat-progress-bar>
+      <form [formGroup]="form" (submit)="onSubmit()">
+        <mat-form-field class="w-100" *ngIf="!isLoginMode">
+          <mat-label>Display Name</mat-label>
+          <input type="email" matInput formControlName="displayName">
+          <!-- <mat-error *ngIf="f.email.errors.required">Email is required</mat-error> -->
+        </mat-form-field>
+        <mat-form-field class="w-100">
+          <mat-label>Email</mat-label>
+          <input type="email" matInput formControlName="email">
+          <!-- <mat-error *ngIf="f.email.errors.required">Email is required</mat-error> -->
+          <mat-error *ngIf="f.email.invalid">Please enter a valid email address</mat-error>
+        </mat-form-field>
+        <mat-form-field class="w-100">
+          <mat-label>Password</mat-label>
+          <input type="password" matInput formControlName="password">
+          <!-- <mat-error *ngIf="f.password.errors.required">Password is required</mat-error> -->
+          <mat-error *ngIf="f.password.invalid">Please enter at least 6 characters</mat-error>
+        </mat-form-field>
+        <button mat-raised-button color="primary" [disabled]="form.invalid">{{ isLoginMode ? 'Login' : 'Sign up' }}</button>
+      </form>
+    </mat-card>
+    <div class="d-flex justify-content-between">
+      <button mat-button color="basic">Forget Password?</button>
+      <button mat-button color="basic" (click)="onSwitchMode()">Switch to {{ isLoginMode ? 'Sign up' : 'Login' }}</button>
+    </div>
+  </div>
+</div>

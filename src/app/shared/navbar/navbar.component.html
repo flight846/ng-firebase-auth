@@ -1,0 +1,17 @@
+<mat-toolbar color="primary" class="nav-fixed">
+  <a routerLink="">
+    <img class="brand" src="../../../assets/img/logo.png" alt="">
+    <span class="brand-text">Angular FireAuth</span>
+  </a>
+  <a routerLink="/public" routerLinkActive="active" type="button" mat-button color="basic">Public</a>
+  <a *ngIf="currentUser" routerLink="/private" routerLinkActive="active" type="button" mat-button color="basic">Private</a>
+  <!-- This fills the remaining space of the current row -->
+  <span class="example-fill-remaining-space"></span>
+
+  <span>
+    <a *ngIf="!currentUser" routerLink="/" type="button" mat-button color="basic">Login</a>
+    <a *ngIf="!currentUser" routerLink="/" type="button" mat-raised-button color="accent">Sign up</a>
+    <a class="initials" *ngIf="currentUser" routerLink="/">{{ currentUser.displayName }}</a>
+    <button *ngIf="currentUser" mat-button color="basic" (click)="logout()">Logout</button>
+  </span>
+</mat-toolbar>

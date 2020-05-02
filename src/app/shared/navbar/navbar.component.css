@@ -1,0 +1,16 @@
+.nav-fixed { position: fixed; top: 0; left: 0; }
+.nav-fixed a[type=button]:hover,
+.nav-fixed button:hover {
+  color: #fff;
+  opacity: 0.7;
+  text-decoration: none;
+}
+.brand { width: 40px; height: auto; margin-right: 10px; }
+.brand-text { color: white; }
+.initials {
+  background-color: #ff4081;
+  border-radius: 50%;
+  padding: 7px 10px;
+  color: #fff;
+  text-decoration: none;
+}

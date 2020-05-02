@@ -1,0 +1,14 @@
+.grad-background-cucumber {
+  width: 100%;
+  height: calc(100vh - 64px);
+  position: relative;
+  background: linear-gradient(90deg, #e3ffe7 0%, #d9e7ff 100%);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.auth-wrapper {
+  width: 40%;
+}

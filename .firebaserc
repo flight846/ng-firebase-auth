@@ -1,0 +1,11 @@
+{
+  "targets": {
+    "angular-firebase-auth-ed79b": {
+      "hosting": {
+        "ng-firebase-auth": [
+          "angular-firebase-auth-ed79b"
+        ]
+      }
+    }
+  }
+}
